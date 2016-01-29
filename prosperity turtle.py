@@ -5,11 +5,20 @@ jimmy = turtle.Turtle()
 wn.screensize(600,600)
 wn.bgcolor("#F8E392")
 
-jimmy.speed(20)
-
 def smallline(a,b,c,d):
     jimmy.width(5)
     jimmy.pencolor("black")
+    jimmy.speed(30)
+    jimmy.up()
+    jimmy.setpos(a,b)
+    jimmy.down()
+    jimmy.seth(c)
+    jimmy.forward(d)
+
+def largeline(a,b,c,d):
+    jimmy.width(8)
+    jimmy.pencolor("black")
+    jimmy.speed(8)
     jimmy.up()
     jimmy.setpos(a,b)
     jimmy.down()
@@ -59,8 +68,58 @@ def le():
     smallline(230,-235,145,10) #gou
     smallline(215,-210,225,20) #dian
     smallline(240,-210,315,20) #dian
+
+def wan():
+    smallline(-250,220,0,60) #heng
+    smallline(-222,220,250,65) #pie
+    smallline(-230,200,0,30) #heng
+    smallline(-200,200,270,45) #zhe
+    smallline(-200,155,135,10) #gou
+
+def square():
+    jimmy.width(2)
+    jimmy.speed(10)
+    jimmy.color("red","red")
+    jimmy.up()
+    jimmy.setpos(0,150)
+    jimmy.down()
+    jimmy.seth(225)
+    jimmy.begin_fill()
+    for x in range(0,4):
+        jimmy.forward(212.13)
+        jimmy.left(90)
+    jimmy.end_fill()
+
+def sqwd():
+    largeline(-50,70,0,100) #heng
+    largeline(-30,43,0,60) #heng
+    largeline(-55,16,0,110) #heng
+    largeline(0,100,270,85) #pie1
+    largeline(0,15,220,75) #pie2
+    largeline(0,15,320,75) #na
+    jimmy.up()
+    jimmy.setpos(-25,-75)
+    jimmy.down()
+    jimmy.circle(40) #kou
+    largeline(-38,-45,0,80)
     
+
+
+
+
 xin()
 nian()
 kuai()
 le()
+
+wan()
+
+square()
+sqwd()
+
+'''jimmy.up()
+jimmy.setpos(200,-150)
+jimmy.down()
+jimmy.pencolor("red")
+jimmy.stamp()'''
+
